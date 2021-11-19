@@ -1,38 +1,356 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	font-family: "Rubik", sans-serif;
+	color: #fff;
+	background-color: hsl(226, 43%, 10%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+	color: hsl(236, 100%, 87%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main {
+	background-color: hsl(226, 43%, 10%);
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.main-items {
+	max-width: 1020px;
+	display: grid;
+	grid-template-columns: repeat(4, 240px);
+	gap: 20px;
+	grid-template-areas:
+		"me work play study"
+		"me exercise social self-care";
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* sidebar left */
+
+.about-me {
+	grid-area: me;
+	background-color: hsl(235, 46%, 20%);
+	border-radius: 15px;
+}
+
+.about-me-info {
+	padding: 30px;
+	border-radius: 15px;
+	background-color: hsl(246, 80%, 60%);
+}
+
+.about-me-info p {
+	font-size: 16px;
+	font-weight: 100;
+}
+
+.about-me-info h1 {
+	font-size: 50px;
+	font-weight: 100;
+	margin-bottom: 30px;
+}
+
+.picture-my {
+	width: 100px;
+	height: 100px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	margin-bottom: 40px;
+}
+
+.picture-my img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.days {
+	padding: 30px;
+}
+
+.days p {
+	margin-bottom: 10px;
+	color: hsl(236, 100%, 87%);
+	cursor: pointer;
+	transition: color 0.2s ease;
+}
+
+.days p:hover {
+	color: #fff;
+}
+
+/* <------ Sidebar rigth -----> */
+
+.work {
+	grid-area: work;
+	cursor: pointer;
+}
+
+.work:hover .text-description {
+	background-color: hsl(235, 45%, 61%);
+}
+
+.work-item {
+	height: 80px;
+	border-radius: 15px;
+	background-color: hsl(15, 100%, 70%);
+}
+
+.work-img {
+	text-align: right;
+	padding-right: 20px;
+	height: 80px;
+	overflow: hidden;
+}
+.work-img svg {
+	margin-top: -10px;
+}
+
+.play {
+	cursor: pointer;
+	grid-area: play;
+}
+
+.play:hover .text-description {
+	background-color: hsl(235, 45%, 61%);
+}
+
+.play-item {
+	height: 80px;
+	border-radius: 15px;
+	background-color: hsl(195, 74%, 62%);
+}
+
+.play-img {
+	text-align: right;
+	padding-right: 20px;
+	height: 80px;
+	overflow: hidden;
+}
+
+.play-img svg {
+	margin-top: -4px;
+}
+
+.study {
+	grid-area: study;
+	cursor: pointer;
+}
+
+.study:hover .text-description {
+	background-color: hsl(235, 45%, 61%);
+}
+
+.study-item {
+	height: 80px;
+	border-radius: 15px;
+	background-color: hsl(348, 100%, 68%);
+}
+
+.study-img {
+	height: 80px;
+	text-align: right;
+	padding-right: 20px;
+	overflow: hidden;
+}
+
+.study-img svg {
+	margin-top: -8px;
+}
+
+.exercise {
+	grid-area: exercise;
+	cursor: pointer;
+}
+
+.exercise:hover .text-description {
+	background-color: hsl(235, 45%, 61%);
+}
+
+.exercise-item {
+	height: 80px;
+	border-radius: 15px;
+	background-color: hsl(145, 58%, 55%);
+}
+
+.exercise-img {
+	text-align: right;
+	padding-right: 20px;
+	height: 80px;
+}
+
+.social {
+	grid-area: social;
+	cursor: pointer;
+}
+
+.social:hover .text-description {
+	background-color: hsl(235, 45%, 61%);
+}
+
+.social-item {
+	height: 80px;
+	border-radius: 15px;
+	background-color: hsl(264, 64%, 52%);
+}
+
+.social-img {
+	height: 80px;
+	text-align: right;
+	padding-right: 20px;
+}
+
+.self-care {
+	grid-area: self-care;
+	cursor: pointer;
+}
+
+.self-care:hover .text-description {
+	background-color: hsl(235, 45%, 61%);
+}
+
+.self-item {
+	height: 80px;
+	border-radius: 15px;
+	background-color: hsl(43, 84%, 65%);
+}
+
+.self-img {
+	text-align: right;
+	padding-right: 20px;
+	height: 80px;
+	overflow: hidden;
+}
+
+.self-img svg {
+	margin-top: -10px;
+}
+
+/* <---------> */
+
+.dots {
+	cursor: pointer;
+}
+
+.dots path {
+	fill: hsl(236, 100%, 87%);
+	transition: fill 0.2s ease;
+}
+
+.dots:hover path {
+	fill: #fff;
+}
+
+/* variables for all sections */
+
+.text-description {
+	background-color: hsl(235, 46%, 20%);
+	position: relative;
+	top: -34px;
+	border-radius: 15px;
+	padding: 15px 30px;
+	transition: all 0.2s ease;
+}
+
+.text-secription-space {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.results {
+	margin: 40px 0;
+}
+
+.results h1 {
+	margin-bottom: 10px;
+	font-size: 40px;
+	font-weight: 300;
+}
+
+.results p {
+	font-size: 15px;
+	font-weight: 300;
+}
+
+/* Media */
+
+@media (max-width: 1024px) {
+	.main-items {
+		margin-top: 40px;
+		display: grid;
+		grid-template-columns: 500px;
+		grid-template-rows: 500px repeat(6, 300px);
+		grid-template-areas:
+			"me"
+			"work"
+			"play"
+			"study "
+			"exercise"
+			"social"
+			"self-care";
+		align-items: baseline;
+	}
+}
+
+@media (max-width: 520px) {
+	.main-items {
+		margin: 30px 20px 10px 20px;
+		display: grid;
+		grid-template-columns: minmax(300px, 400px);
+		grid-template-rows: 300px repeat(6, 200px);
+		grid-row: 20px;
+		grid-template-areas:
+			"me"
+			"work"
+			"play"
+			"study "
+			"exercise"
+			"social"
+			"self-care";
+	}
+
+	.about-me-info {
+		display: flex;
+		align-items: center;
+	}
+
+	.my-id {
+		margin-left: 20px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.my-id h1 {
+		font-size: 16px;
+	}
+
+	.days {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.results {
+		margin: 20px 0;
+	}
+
+	.results-info {
+		display: flex;
+		align-items: center;
+	}
+
+	.results-info h1 {
+		font-size: 30px;
+		margin-right: 20px;
+	}
 }
