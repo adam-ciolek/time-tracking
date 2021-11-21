@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/adam-ciolek/time-tracking/static/css/main.56120c23.chunk.css",
+    "main.js": "/adam-ciolek/time-tracking/static/js/main.41ee3f84.chunk.js",
+    "main.js.map": "/adam-ciolek/time-tracking/static/js/main.41ee3f84.chunk.js.map",
+    "runtime-main.js": "/adam-ciolek/time-tracking/static/js/runtime-main.45ef05f7.js",
+    "runtime-main.js.map": "/adam-ciolek/time-tracking/static/js/runtime-main.45ef05f7.js.map",
+    "static/js/2.26b4b578.chunk.js": "/adam-ciolek/time-tracking/static/js/2.26b4b578.chunk.js",
+    "static/js/2.26b4b578.chunk.js.map": "/adam-ciolek/time-tracking/static/js/2.26b4b578.chunk.js.map",
+    "index.html": "/adam-ciolek/time-tracking/index.html",
+    "static/css/main.56120c23.chunk.css.map": "/adam-ciolek/time-tracking/static/css/main.56120c23.chunk.css.map",
+    "static/js/2.26b4b578.chunk.js.LICENSE.txt": "/adam-ciolek/time-tracking/static/js/2.26b4b578.chunk.js.LICENSE.txt",
+    "static/media/image-jeremy.71cd41f1.png": "/adam-ciolek/time-tracking/static/media/image-jeremy.71cd41f1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.45ef05f7.js",
+    "static/js/2.26b4b578.chunk.js",
+    "static/css/main.56120c23.chunk.css",
+    "static/js/main.41ee3f84.chunk.js"
+  ]
+}
